@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroots\Uploads\44800d3a-93eb-4c9e-bd98-75e4dab48c5a\**" />
+    <Compile Remove="wwwroots\Uploads\503f9ea4-399d-4d5e-a457-1bc3503d4f9f\**" />
+    <Compile Remove="wwwroots\Uploads\5c683dec-7874-467a-9563-9c62f4032df5\**" />
+    <EmbeddedResource Remove="wwwroots\Uploads\44800d3a-93eb-4c9e-bd98-75e4dab48c5a\**" />
+    <EmbeddedResource Remove="wwwroots\Uploads\503f9ea4-399d-4d5e-a457-1bc3503d4f9f\**" />
+    <EmbeddedResource Remove="wwwroots\Uploads\5c683dec-7874-467a-9563-9c62f4032df5\**" />
+    <None Remove="wwwroots\Uploads\44800d3a-93eb-4c9e-bd98-75e4dab48c5a\**" />
+    <None Remove="wwwroots\Uploads\503f9ea4-399d-4d5e-a457-1bc3503d4f9f\**" />
+    <None Remove="wwwroots\Uploads\5c683dec-7874-467a-9563-9c62f4032df5\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="wwwroots\Uploads\9af21565-3a8f-43ae-bff4-2ce03b8634f6\pontiac fiero.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroots\Uploads\9af21565-3a8f-43ae-bff4-2ce03b8634f6\pontiac fiero.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+    <PackageReference Include="Moq" Version="4.16.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="1.3.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ImageLibrary\ImageLibrary.csproj" />
+  </ItemGroup>
+
+</Project>

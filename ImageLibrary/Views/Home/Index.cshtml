@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IEnumerable<ImageLibrary.Models.ImageFile>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <div>
+        <table border="1">
+            @foreach (var row in Model)
+            {
+                <tr>
+                    <td><img src="@Url.Content(@row.FileName)" height="200px" width="300px" /> </td>
+                    <td><button onclick="location.href='@Url.Action("RemoveImage", "Home", new { id = row.Id })'" type="submit" class="btn btn-danger btn-circle btn-xl">Remove</button></td>
+                </tr>
+                <tr>
+                    <td><br/></td>
+                </tr>
+            }
+            
+        </table>
+    </div>
+</div>
